@@ -10,6 +10,7 @@ export default function Home() {
         <div className='border border-black'>
           form
         </div>
+        post
       </div>
     </div>
   )

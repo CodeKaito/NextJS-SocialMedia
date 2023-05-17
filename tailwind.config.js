@@ -7,7 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
+      colors: {
+        socialBg:'F5F7FB',
+        socialBlue: '#218DFA',
       },
     },
   },
