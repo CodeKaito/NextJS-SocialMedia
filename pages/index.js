@@ -1,21 +1,26 @@
+import Avatar from "@/components/Avatar";
 import Card from "@/components/Card";
+import NavigationCard from "@/components/NavigationCard";
+import PostFormCard from "@/components/PostFormCard";
 
 export default function Home() {
   return (
     <div className='flex mt-4 max-w-4xl mx-auto gap-6'>
       <div className='w-1/3'>
-        <Card>
-          <h2 className='text-gray-400 mb-3'>Navigation</h2>
-          <a href="" className="flex gap-2 py-3">Home</a>
-          <a href="" className="flex gap-2 py-3">Friends</a>
-          <a href="" className="flex gap-2 py-3">Saved posts</a>
-          <a href="" className="flex gap-2 py-3">Notifications</a>
-          <a href="" className="flex gap-2 py-3">Logout</a>
-        </Card>
+        <NavigationCard />
       </div>
       <div className='grow'>
-        <Card>form here</Card>
-        <Card>first post test</Card>
+        <PostFormCard />
+        <Card>
+          <div className='flex'>
+            <div>
+              <Avatar />
+            </div>
+            <div>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem eligendi quas voluptatem exercitationem quis explicabo animi ex accusamus, a, odit dignissimos, quibusdam quo eaque debitis tenetur corrupti quam tempore quod.</p>
+            </div>
+          </div>
+        </Card>
       </div>
     </div>
   )
