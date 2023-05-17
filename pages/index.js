@@ -8,7 +8,7 @@ export default function Home() {
       </div>
       <div className='grow'>
         <Card>form here</Card>
-        post
+        <Card>first post test</Card>
       </div>
     </div>
   )
