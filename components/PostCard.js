@@ -31,7 +31,7 @@ export default function PostCard() {
                 <Avatar />
                 </div>
                 <div className='grow'>
-                <p><a className='font-semibold'>John Doe</a> shared a <a className='text-socialBlue'>post</a></p>
+                <p><a className='font-semibold cursor-pointer hover:underline'>John Doe</a> shared a <a className='text-socialBlue'>post</a></p>
                 <p className='text-gray-500 text-sm'>Posted 2 hours ago</p>
                 </div>
                 <div className="relative">
@@ -45,11 +45,11 @@ export default function PostCard() {
                         <div className='relative'>
                         {dropdownOpen && (
                             <div className='absolute -right-6 bg-white shadow-lg shadow-gray-700 p-3 rounded-md border-gray-100 w-52'>
-                                <a href='' className='flex py-2 gap-2 px-2'><BsFillBookmarksFill />Save post </a>
-                                <a href='' className='flex py-2 gap-2 px-2'><AiFillBell />Turn notifications</a>
-                                <a href='' className='flex py-2 gap-2 px-2'><FaTimes />Hide</a>
-                                <a href='' className='flex py-2 gap-2 px-2 text-red-500'><RiDeleteBin6Fill />Delete</a>
-                                <a href='' className='flex py-2 gap-2 px-2 text-red-500'><GoAlert />Report</a>
+                                <a href='' className='text-sm md:text-md flex gap-1 md:gap-3 py-2 my-2 hover:bg-blue-500 hover:bg-opacity-20 px-6 md:px-4 rounded-md transition-all hover:scale-110 hover:shadow-md shadow-gray-300 items-center'><BsFillBookmarksFill />Save post </a>
+                                <a href='' className='text-sm md:text-md flex gap-1 md:gap-3 py-2 my-2 hover:bg-blue-500 hover:bg-opacity-20 px-6 md:px-4 rounded-md transition-all hover:scale-110 hover:shadow-md shadow-gray-300 items-center'><AiFillBell />Turn notifications</a>
+                                <a href='' className='text-sm md:text-md flex gap-1 md:gap-3 py-2 my-2 hover:bg-blue-500 hover:bg-opacity-20 px-6 md:px-4 rounded-md transition-all hover:scale-110 hover:shadow-md shadow-gray-300 items-center'><FaTimes />Hide</a>
+                                <a href='' className='text-sm md:text-md flex gap-1 md:gap-3 py-2 my-2 hover:bg-red-500 hover:bg-opacity-20 px-6 md:px-4 rounded-md transition-all hover:scale-110 hover:shadow-md shadow-gray-300 items-center hover:text-red-600'><RiDeleteBin6Fill />Delete</a>
+                                <a href='' className='text-sm md:text-md flex gap-1 md:gap-3 py-2 my-2 hover:bg-red-500 hover:bg-opacity-20 px-6 md:px-4 rounded-md transition-all hover:scale-110 hover:shadow-md shadow-gray-300 items-center hover:text-red-600'><GoAlert />Report</a>
                             </div>
                         )}
                         </div>
