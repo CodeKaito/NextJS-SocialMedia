@@ -3,19 +3,32 @@ import Avatar from "./Avatar";
 import Card from "./Card";
 import { AiOutlineHeart } from 'react-icons/ai'
 import { FaRegComment } from 'react-icons/fa'
-import { BsShare } from 'react-icons/bs'
+import { BsShare, BsThreeDotsVertical } from 'react-icons/bs'
 import { IoImageOutline } from 'react-icons/io5'
+import ClickOutHandler from 'react-clickout-handler'
+import { useState } from "react/cjs/react.production.min";
 
 export default function PostCard() {
+
+    const [dropdown, setDropdown] = useState();
+    
     return(
         <Card>
             <div className='flex gap-3'>
                 <div>
                 <Avatar />
                 </div>
-                <div>
+                <div className='grow'>
                 <p><a className='font-semibold'>John Doe</a> shared a <a className='text-socialBlue'>post</a></p>
-                <p className='text-gray-500 text-sm'>2 hours ago</p>
+                <p className='text-gray-500 text-sm'>Posted 2 hours ago</p>
+                </div>
+                <div className="relative">
+                    <button className='text-gray-500 hover:text-gray-800'><BsThreeDotsVertical /></button>
+                    <ClickOutHandler onClickOut={() => {}}>
+                        <div>
+                            dropdown menu
+                        </div>
+                    </ClickOutHandler>
                 </div>
             </div>
             <div>
