@@ -2,6 +2,7 @@ import Image from "next/image";
 import Avatar from "./Avatar";
 import Card from "./Card";
 import { AiOutlineHeart } from 'react-icons/ai'
+import { FaRegCommentDots } from 'react-icons/fa'
 
 export default function PostCard() {
     return(
@@ -24,9 +25,12 @@ export default function PostCard() {
                     <Image src="/images/santorini.jpg" width='900' height='900' alt="santorini" />
                 </div>
             </div>
-            <div>
+            <div className='mt-5'>
                 <button className='flex gap-2 items-center'>
                     <AiOutlineHeart />72
+                </button>
+                <button className='flex gap-2 items-center'>
+                    <FaRegCommentDots />
                 </button>
             </div>
         </Card>
