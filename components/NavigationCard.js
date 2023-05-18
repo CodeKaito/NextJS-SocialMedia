@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Card from "./Card";
 import { AiOutlineHome } from 'react-icons/ai'
 import { BsPeople, BsBookmarks } from 'react-icons/bs'
@@ -12,7 +13,10 @@ export default function NavigationCard() {
         <Card>
         <div className='px-4 py-2'>
             <h2 className='text-gray-400 mb-3'>Navigation</h2>
-                <a href="" className={activeElement}><AiOutlineHome />Home</a>
+                <Link href={'/'}>
+                    <span className={activeElement}><AiOutlineHome />Home</span>
+                </Link>
+                
                 <a href="" className={nonActiveElement}><BsPeople />Friends</a>
                 <a href="" className={nonActiveElement}><BsBookmarks />Saved</a>
                 <a href="" className={nonActiveElement}><IoMdNotificationsOutline />Notifications</a>

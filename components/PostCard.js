@@ -9,6 +9,7 @@ import { IoImageOutline } from 'react-icons/io5'
 import { GoAlert } from 'react-icons/go'
 import ClickOutHandler from 'react-clickout-handler'
 import { useState } from "react";
+import Link from "next/link";
 
 export default function PostCard() {
 
@@ -28,10 +29,16 @@ export default function PostCard() {
         <Card>
             <div className='flex gap-3'>
                 <div>
-                <Avatar />
+                    <Link href={'/profile'}>
+                    <span className='cursor-pointer'><Avatar /></span>
+                    </Link>
                 </div>
                 <div className='grow'>
-                <p><a className='font-semibold cursor-pointer hover:underline'>John Doe</a> shared a <a className='text-socialBlue'>post</a></p>
+                <p>
+                    <Link href={'/profile'}>
+                        <span className=' mr-1 font-semibold cursor-pointer hover:underline'>John Doe</span> 
+                    </Link>
+                shared a <a className='text-socialBlue'>post</a></p>
                 <p className='text-gray-500 text-sm'>Posted 2 hours ago</p>
                 </div>
                 <div className="relative">
