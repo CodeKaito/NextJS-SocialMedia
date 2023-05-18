@@ -1,17 +1,29 @@
 import Image from "next/image";
 import Avatar from "./Avatar";
 import Card from "./Card";
-import { AiOutlineHeart } from 'react-icons/ai'
-import { FaRegComment } from 'react-icons/fa'
-import { BsShare, BsThreeDotsVertical } from 'react-icons/bs'
+import { AiOutlineHeart, AiFillBell } from 'react-icons/ai'
+import { FaRegComment, FaTimes } from 'react-icons/fa'
+import { RiDeleteBin6Fill } from 'react-icons/ri'
+import { BsShare, BsThreeDotsVertical, BsFillBookmarksFill } from 'react-icons/bs'
 import { IoImageOutline } from 'react-icons/io5'
+import { GoAlert } from 'react-icons/go'
 import ClickOutHandler from 'react-clickout-handler'
-import { useState } from "react/cjs/react.production.min";
+import { useState } from "react";
 
 export default function PostCard() {
 
-    const [dropdown, setDropdown] = useState();
-    
+    const [dropdownOpen, setDropdownOpen] = useState(false);
+
+    function openDropdown(e) {
+        e.stopPropagation();
+        setDropdownOpen(true);
+    }
+
+    function handleClickOutsideDropdown(e) {
+        e.stopPropagation();
+        setDropdownOpen(false);
+    }
+
     return(
         <Card>
             <div className='flex gap-3'>
@@ -23,10 +35,23 @@ export default function PostCard() {
                 <p className='text-gray-500 text-sm'>Posted 2 hours ago</p>
                 </div>
                 <div className="relative">
-                    <button className='text-gray-500 hover:text-gray-800'><BsThreeDotsVertical /></button>
-                    <ClickOutHandler onClickOut={() => {}}>
-                        <div>
-                            dropdown menu
+                    {!dropdownOpen && (
+                        <button onClick={openDropdown} className='text-gray-500 hover:text-gray-800'><BsThreeDotsVertical /></button>
+                    )}
+                    {dropdownOpen && (
+                        <button className='text-gray-500 hover:text-gray-800'><BsThreeDotsVertical /></button>
+                    )}
+                    <ClickOutHandler onClickOut={handleClickOutsideDropdown}>
+                        <div className='relative'>
+                        {dropdownOpen && (
+                            <div className='absolute -right-6 bg-white shadow-lg shadow-gray-700 p-3 rounded-md border-gray-100 w-52'>
+                                <a href='' className='flex py-2 gap-2 px-2'><BsFillBookmarksFill />Save post </a>
+                                <a href='' className='flex py-2 gap-2 px-2'><AiFillBell />Turn notifications</a>
+                                <a href='' className='flex py-2 gap-2 px-2'><FaTimes />Hide</a>
+                                <a href='' className='flex py-2 gap-2 px-2 text-red-500'><RiDeleteBin6Fill />Delete</a>
+                                <a href='' className='flex py-2 gap-2 px-2 text-red-500'><GoAlert />Report</a>
+                            </div>
+                        )}
                         </div>
                     </ClickOutHandler>
                 </div>
