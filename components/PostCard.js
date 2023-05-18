@@ -3,6 +3,7 @@ import Avatar from "./Avatar";
 import Card from "./Card";
 import { AiOutlineHeart } from 'react-icons/ai'
 import { FaRegCommentDots } from 'react-icons/fa'
+import { BiShare } from 'react-icons/bi'
 
 export default function PostCard() {
     return(
@@ -30,7 +31,10 @@ export default function PostCard() {
                     <AiOutlineHeart />72
                 </button>
                 <button className='flex gap-2 items-center'>
-                    <FaRegCommentDots />
+                    <FaRegCommentDots />11
+                </button>
+                <button className='flex gap-2 items-center'>
+                    <BiShare />Share
                 </button>
             </div>
         </Card>
