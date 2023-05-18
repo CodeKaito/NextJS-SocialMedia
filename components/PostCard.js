@@ -2,8 +2,9 @@ import Image from "next/image";
 import Avatar from "./Avatar";
 import Card from "./Card";
 import { AiOutlineHeart } from 'react-icons/ai'
-import { FaRegCommentDots } from 'react-icons/fa'
-import { BiShare } from 'react-icons/bi'
+import { FaRegComment } from 'react-icons/fa'
+import { BsShare } from 'react-icons/bs'
+import { IoImageOutline } from 'react-icons/io5'
 
 export default function PostCard() {
     return(
@@ -26,16 +27,26 @@ export default function PostCard() {
                     <Image src="/images/santorini.jpg" width='900' height='900' alt="santorini" />
                 </div>
             </div>
-            <div className='mt-5'>
+            <div className='mt-5 flex gap-8'>
                 <button className='flex gap-2 items-center'>
                     <AiOutlineHeart />72
                 </button>
                 <button className='flex gap-2 items-center'>
-                    <FaRegCommentDots />11
+                    <FaRegComment />11
                 </button>
                 <button className='flex gap-2 items-center'>
-                    <BiShare />Share
+                    <BsShare />4
                 </button>
+            </div>
+            <div className='flex mt-4 gap-3'>
+                <div>
+                    <Avatar />
+                </div>
+                <div className='border grow rounded-md relative'>
+                    <textarea className='block w-full overflow-hidden p-3 px-4 h-12' placeholder='Leave a comment' />
+                    <button className='absolute top-3 right-3 text-gray-400'><IoImageOutline className='w-7 h-7'/></button>
+                    
+                </div>
             </div>
         </Card>
     )
