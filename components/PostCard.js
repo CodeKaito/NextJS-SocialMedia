@@ -20,7 +20,7 @@ export default function PostCard() {
                 Quidem eligendi quas voluptatem exercitationem quis explicabo animi ex accusamus, a, odit dignissimos, 
                 quibusdam quo eaque debitis tenetur corrupti quamtempore quod.
                 </p>
-                <div>
+                <div className='rounded-md'>
                     <Image src="/images/santorini.jpg" width='900' height='900' alt="santorini" />
                 </div>
             </div>
@@ -40,7 +40,7 @@ export default function PostCard() {
                 Quidem eligendi quas voluptatem exercitationem quis explicabo animi ex accusamus, a, odit dignissimos, 
                 quibusdam quo eaque debitis tenetur corrupti quamtempore quod.
                 </p>
-                <div>
+                <div className='rounded-md'>
                     <Image src="/images/caraibi.jpg" width='900' height='900' alt="santorini" />
                 </div>
             </div>
