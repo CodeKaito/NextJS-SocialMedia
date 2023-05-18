@@ -17,7 +17,9 @@ export default function Home() {
               <Avatar />
             </div>
             <div>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem eligendi quas voluptatem exercitationem quis explicabo animi ex accusamus, a, odit dignissimos, quibusdam quo eaque debitis tenetur corrupti quam tempore quod.</p>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                Quidem eligendi quas voluptatem exercitationem quis explicabo animi ex accusamus, a, odit dignissimos, 
+                quibusdam quo eaque debitis tenetur corrupti quam tempore quod.</p>
             </div>
           </div>
         </Card>
