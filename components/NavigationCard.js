@@ -30,9 +30,17 @@ export default function NavigationCard() {
                     <span className={pathname === '/profile/friends' ? activeElementClasses : nonActiveElementClasses}><BsPeople />Friends</span>
                 </Link>
                 
-                <a href="" className={nonActiveElementClasses}><BsBookmarks />Saved posts</a>
-                <a href="" className={nonActiveElementClasses}><IoMdNotificationsOutline />Notifications</a>
-                <a href="" className={nonActiveElementClasses}><IoMdLogOut />Logout</a>
+                <Link href={'/saved'}>
+                    <span className={pathname === '/saved' ? activeElementClasses : nonActiveElementClasses}><BsBookmarks />Saved posts</span>
+                </Link>
+
+                <Link href={'/notifications'}>
+                    <span className={pathname === '/notifications' ? activeElementClasses : nonActiveElementClasses}><IoMdNotificationsOutline />Notifications</span>
+                </Link>
+
+                <Link href={'/'}>
+                    <span href="" className={nonActiveElementClasses}><IoMdLogOut />Logout</span>
+                </Link>
         </div>
         </Card>
     )
