@@ -5,7 +5,7 @@ export default function Layout({children, hideNavigation}) {
     if (hideNavigation) {
         rightColumnClasses += 'w-full';
         } else {
-        rightColumnClasses += 'w-9/12';
+        rightColumnClasses += 'mx-4 md:max-0 md:w-9/12';
     }
     return(
         <div className='md:flex mt-4 max-w-4xl mx-auto gap-6'>
