@@ -7,6 +7,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 export default function ProfilePage() {
+
     const router = useRouter();
     const {pathname} = router;
     const isPosts = pathname.includes('posts') || pathname === '/profile';
@@ -15,6 +16,7 @@ export default function ProfilePage() {
     const isPhotos = pathname.includes('photo');
     const tabClasses = 'flex gap-1 px-5 py-1 items-center';
     const activeTabClasses = 'flex gap-1 px-5 py-1 items-center bg-socialBlue text-white rounded-md';
+    
     return (
         <Layout>
             <Card noPadding={true}>
