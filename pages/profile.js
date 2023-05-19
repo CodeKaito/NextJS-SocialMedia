@@ -1,5 +1,6 @@
 import Avatar from "@/components/Avatar";
 import Card from "@/components/Card";
+import FriendInfo from "@/components/FriendInfo";
 import Layout from "@/components/Layout";
 import PostCard from "@/components/PostCard";
 import Image from "next/image";
@@ -52,7 +53,58 @@ export default function ProfilePage() {
                     </div>
                 </div>
             </Card>
-            <PostCard />
+            {isPosts && (
+                <PostCard />
+            )}
+            {isAbout && (
+                <Card>
+                    <h2 className='text-3xl mb-2'>About me</h2>
+                    <p className='mb-2 text-sm'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem omnis cumque vel corporis quasi ipsum libero illum perferendis! Perspiciatis praesentium ex sequi quae iure voluptates earum ducimus inventore tenetur non.</p>
+                    <p className='mb-2 text-sm'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum sit aspernatur ratione culpa totam temporibus consequatur impedit tenetur, adipisci, molestias ipsum. Laboriosam laborum quos consectetur aliquam omnis earum dolorum totam!</p>
+                </Card>
+            )}
+            {isFriends && (
+                <Card>
+                    <h2 className='text-3xl mb-2'>Friends</h2>
+                    <div className=''>
+                        <div className='border-b border-b-gray-100 p-4 -mx-4'>
+                            <FriendInfo />
+                        </div>
+                        <div className='border-b border-b-gray-100 p-4 -mx-4'>
+                            <FriendInfo />
+                        </div>
+                        <div className='border-b border-b-gray-100 p-4 -mx-4'>
+                            <FriendInfo />
+                        </div>
+                        <div className='border-b border-b-gray-100 p-4 -mx-4'>
+                            <FriendInfo />
+                        </div>
+                        <div className='border-b border-b-gray-100 p-4 -mx-4'>
+                            <FriendInfo />
+                        </div>
+                    </div>
+                </Card>
+            )}
+            {isPhotos && (
+                <div>
+                    <Card>
+                        <div className='grid grid-cols-2 gap-4'>
+                            <div className='rounded-md overflow-hidden h-50 shadow-md flex item-center hover:scale-105 transition-all cursor-pointer'>
+                                <img src="https://images.pexels.com/photos/2286895/pexels-photo-2286895.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+                            </div>
+                            <div className='rounded-md overflow-hidden h-50 shadow-md flex item-center hover:scale-105 transition-all cursor-pointer'>
+                                <img src="https://images.pexels.com/photos/2286895/pexels-photo-2286895.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+                            </div>
+                            <div className='rounded-md overflow-hidden h-50 shadow-md flex item-center hover:scale-105 transition-all cursor-pointer'>
+                                <img src="https://images.pexels.com/photos/2286895/pexels-photo-2286895.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+                            </div>
+                            <div className='rounded-md overflow-hidden h-50 shadow-md flex item-center hover:scale-105 transition-all cursor-pointer'>
+                                <img src="https://images.pexels.com/photos/2286895/pexels-photo-2286895.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+                            </div>
+                        </div>
+                    </Card>
+                </div>
+            )}
         </Layout>
     )
 }

@@ -9,7 +9,7 @@ import { useRouter } from "next/router";
 export default function NavigationCard() {
 
     const router = useRouter();
-    const {pathname} = router;
+    const {asPath:pathname} = router;
 
     const activeElementClasses = 'hover:font-bold text-sm md:text-md flex gap-1 md:gap-3 py-3 my-1 bg-socialBlue text-white md:-mx-7 px-6 md:px-7 rounded-md shadow-md shadow-gray-300 items-center';
     const nonActiveElementClasses = 'hover:font-bold text-sm md:text-md flex gap-1 md:gap-3 py-2 my-2 hover:bg-blue-500 hover:bg-opacity-20 md:-mx-4 px-6 md:px-4 rounded-md transition-all hover:scale-110 hover:shadow-md shadow-gray-300 items-center';
@@ -23,10 +23,13 @@ export default function NavigationCard() {
                 </Link>
                 
                 <Link href={'/profile'}>
-                <span className={pathname === '/profile' ? activeElementClasses : nonActiveElementClasses}><CgProfile />Profile</span>
+                <span className={pathname.startsWith('/profile') && pathname !== ('/profile/friends') ? activeElementClasses : nonActiveElementClasses}><CgProfile />Profile</span>
                 </Link>
 
-                <a href="" className={nonActiveElementClasses}><BsPeople />Friends</a>
+                <Link href={'/profile/friends'}>
+                    <span className={pathname === '/profile/friends' ? activeElementClasses : nonActiveElementClasses}><BsPeople />Friends</span>
+                </Link>
+                
                 <a href="" className={nonActiveElementClasses}><BsBookmarks />Saved posts</a>
                 <a href="" className={nonActiveElementClasses}><IoMdNotificationsOutline />Notifications</a>
                 <a href="" className={nonActiveElementClasses}><IoMdLogOut />Logout</a>
