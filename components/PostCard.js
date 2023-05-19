@@ -90,7 +90,6 @@ export default function PostCard() {
                 <div className='border grow rounded-md relative'>
                     <textarea className='block w-full overflow-hidden p-3 px-4 h-12' placeholder='Leave a comment' />
                     <button className='absolute top-3 right-3 text-gray-400'><IoImageOutline className='w-7 h-7'/></button>
-                    
                 </div>
             </div>
         </Card>

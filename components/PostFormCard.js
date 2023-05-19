@@ -14,13 +14,13 @@ export default function PostFormCard() {
             </div>
             <div className='flex gap-5 items-center mt-2'>
                 <div>
-                    <button className='flex gap-1'><BsUniversalAccess />People</button>
+                    <button className='flex gap-1'><BsUniversalAccess /><span className='hidden sm:block'>People</span></button>
                 </div>
                 <div>
-                    <button className='flex gap-1'><GiPositionMarker />Check in</button>
+                    <button className='flex gap-1'><GiPositionMarker /><span className='hidden sm:block'>Check in</span></button>
                 </div>
                 <div>
-                    <button className='flex gap-1'><BsFillSunFill />Mood</button>
+                    <button className='flex gap-1'><BsFillSunFill /><span className='hidden sm:block'>Mood</span></button>
                 </div>
                 <div className='grow text-right '>
                     <button className="bg-socialBlue text-white px-5 py-1 rounded-md">Share a post</button>
