@@ -38,7 +38,7 @@ export default function NavigationCard() {
                     <span className={pathname === '/notifications' ? activeElementClasses : nonActiveElementClasses}><IoMdNotificationsOutline />Notifications</span>
                 </Link>
 
-                <Link href={'/'}>
+                <Link href={'/login'}>
                     <span href="" className={nonActiveElementClasses}><IoMdLogOut />Logout</span>
                 </Link>
         </div>

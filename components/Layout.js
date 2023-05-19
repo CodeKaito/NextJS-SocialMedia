@@ -1,15 +1,23 @@
 import NavigationCard from "./NavigationCard";
 
-export default function Layout({children}) {
+export default function Layout({children, hideNavigation}) {
+    let rightColumnClasses = '';
+    if (hideNavigation) {
+        rightColumnClasses += 'w-full';
+        } else {
+        rightColumnClasses += 'w-9/12';
+    }
     return(
-        <div className='flex mt-4 max-w-4xl mx-auto gap-6'>
+        <div className='md:flex mt-4 max-w-4xl mx-auto gap-6'>
             <title>PostMate</title>
+            {!hideNavigation && (
                 <div className='w-3/12'>
                     <NavigationCard />
                 </div>
-            <div className='w-9/12'>
+            )}  
+            <div className={rightColumnClasses}>
                 {children}
-            </div>
+                </div>
         </div>
     )
 }
