@@ -38,7 +38,7 @@ export default function PostCard() {
                     <Link href={'/profile'}>
                         <span className=' mr-1 font-semibold cursor-pointer hover:underline'>John Doe</span> 
                     </Link>
-                shared a <a className='text-socialBlue'>post</a></p>
+                shared a <a className='text-socialBlue font-semibold'>post</a></p>
                 <p className='text-gray-500 text-sm'>Posted 2 hours ago</p>
                 </div>
                 <div className="relative">
