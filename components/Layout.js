@@ -11,7 +11,7 @@ export default function Layout({children, hideNavigation}) {
         <div className='md:flex mt-4 max-w-4xl mx-auto gap-6'>
             <title>PostMate</title>
             {!hideNavigation && (
-                <div className='w-3/12'>
+                <div className='fixed md:static w-full bottom-0 md:w-3/12 -mb-5'>
                     <NavigationCard />
                 </div>
             )}  

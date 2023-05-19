@@ -16,10 +16,10 @@ export default function NavigationCard() {
 
     return (
         <Card>
-        <div className='px-4 py-2'>
-            <h2 className='text-gray-400 mb-3'>Navigation</h2>
+        <div className='px-4 py-2 flex md:block'>
+            <h2 className='text-gray-400 mb-3 hidden md:block'>Navigation</h2>
                 <Link href={'/'}>
-                    <span className={pathname === '/' ? activeElementClasses : nonActiveElementClasses}><AiOutlineHome />Home</span>
+                    <span className={pathname === '/' ? activeElementClasses : nonActiveElementClasses}><AiOutlineHome className='sm:hidden'/>Home</span>
                 </Link>
                 
                 <Link href={'/profile'}>
